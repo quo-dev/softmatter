@@ -1,0 +1,27 @@
+html {
+  font-size: 62.5%;
+}
+img {
+  max-width: 100%;
+}
+h3 {
+  line-height: 1.15;
+}
+h4,h5,h6 {
+  line-height: 1.2;
+}
+.f-24{
+  font-size: $font-size-medium;
+}
+
+@include media-breakpoint-up(lg) {
+  h1.title {
+    font-size: $h2-font-size;
+  }
+
+}
+@include media-breakpoint-between(lg,xl) {
+  .h1,h1 {
+    font-size: $h2-font-size;
+  }
+}

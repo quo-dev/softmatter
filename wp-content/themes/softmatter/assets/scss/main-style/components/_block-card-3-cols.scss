@@ -1,0 +1,144 @@
+.card-3-cols-block {
+  .wrap-content {
+    text-align: center;
+  }
+  .col-md-4 {
+    margin-bottom: 3rem;
+  }
+  padding-bottom: 7rem;
+  @include media-breakpoint-up(md) {
+    .wrap-content {
+      padding-bottom: 6rem;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      .cta {
+        position: absolute;
+        bottom:0;
+        left:0;
+        width: 100%;
+        text-align: center;
+      }
+    }
+    .card-item {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+  }
+  .title {
+    margin-top: 4.4rem;
+    font-weight: 500;
+    font-size: $font-size-medium;
+    margin-bottom: 1.7rem;
+
+    > a {
+      text-decoration: none;
+    }
+  }
+  .content  {
+    font-weight: 300;
+    margin-bottom: 2.4rem;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .more-content {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 300;
+    margin-bottom: 2.4rem;
+    font-family: $headings-font-family;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    display: none;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .read-more {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 300;
+    color: rgba(8, 41, 59, 0.5);
+    text-decoration: none;
+    > i {
+      display: inline-block;
+      vertical-align: -1px;
+      transition: 200ms ease-out;
+      transform: rotate(0deg);
+      &:before {
+      }
+    }
+    &.active {
+      > i {
+        transform: rotate(-180deg);
+        &:before {
+        }
+      }
+    }
+    &:hover, &.active {
+      color: $link-hover-color;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    .title {
+      margin-top: 3rem;
+       br {
+         display: none;
+       }
+    }
+  }
+
+  // ICON HOVERING
+  .icon-hovering {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
+  // CASE 2
+  &.secondary {
+    .title {
+      margin-top: 4rem;
+      margin-bottom: 3.5rem;
+      font-weight: 300;
+      font-size: 3rem;
+      line-height: 3.6rem;
+    }
+    .content {
+      p {
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 24px;
+      }
+      ul {
+        margin-top: 4.2rem;
+        list-style: none;
+        > li {
+          font-weight: 300;
+          font-size: 20px;
+          line-height: 28px;
+          &:before {
+            content: "\2022";
+            color: $green;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Remove Top Spacing
+.title-block + .card-3-cols-block {
+  padding-top: 0;
+}

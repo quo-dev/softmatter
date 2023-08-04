@@ -1,0 +1,67 @@
+.nav-pills {
+  font-size: 1.8rem;
+  .nav-link {
+    padding: .5rem 1.5rem;
+    background: none!important;
+    &.active  {
+      color: inherit;
+    }
+
+  }
+}
+
+.navbar-toggler {
+  display: none;
+  margin-left: 2rem;
+}
+@include media-breakpoint-down(lg) {
+  .navbar-close {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    font-size: 3rem;
+  }
+  .navbar-toggler {
+    display: block;
+    margin-left: 1rem;
+  }
+  .cart-btn {
+    margin-right: 0!important;
+  }
+  .logo {
+    flex: 1;
+  }
+  .main-navbar {
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    color: $body-color;
+    left:0;
+    background: white;
+    height: 100%;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+    border-radius: 0 0 0 0;
+    transform: translateX(100vw);
+    .open-menu & {
+      transform: translateX(0);
+    }
+    .nav-pills {
+      padding-top: 4rem;
+      flex-direction: column;
+    }
+    .nav-link {
+      color: inherit!important;
+      font-size: 2.6rem;
+      padding: 2rem 4rem;
+    }
+  }
+}
+.open-menu {
+  overflow: hidden;
+  body {
+    overflow: hidden;
+  }
+}
+
+

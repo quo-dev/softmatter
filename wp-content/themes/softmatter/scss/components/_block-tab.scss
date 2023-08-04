@@ -1,0 +1,160 @@
+.tab-block{
+  .parent-tab.nav-tabs {
+    .nav-item {
+      .nav-link {
+        &.active{
+          color: $pink !important;
+          span {
+            &:after{
+              background: $pink;
+            }
+          }
+
+        }
+        @include media-breakpoint-down(md){
+          span{
+            padding-bottom: 0;
+            &:after{
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.text-salmon{
+    .nav-tabs {
+      .active {
+        .tab-title{
+          color: $pink !important;
+          span:after{
+            background: $pink;
+          }
+        }
+      }
+    }
+    .parent-tab {
+      .nav-item {
+        > .nav-link{
+          &.active{
+            color: $pink !important;
+            span:after{
+              background: $pink !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.text-dush{
+    .nav-tabs {
+      .active {
+        .tab-title{
+          color: $gray-900 !important;
+          &:after{
+            background: $gray-900;
+          }
+        }
+      }
+    }
+    .parent-tab {
+      .nav-item {
+        > .nav-link{
+          &.active{
+            color: $gray-900 !important;
+            span:after{
+              background: $gray-900 !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.text-mint{
+    .nav-tabs {
+      .active {
+        .tab-title{
+          color: $green !important;
+          &:after{
+            background: $green !important;
+          }
+        }
+      }
+    }
+    .parent-tab {
+      .nav-item {
+        > .nav-link{
+          &.active{
+            color: $green !important;
+            span:after{
+              background: $green !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  .text-in{
+    .icons{
+      width: 8rem;
+      margin-bottom: 2rem;
+    }
+  }
+  .image{
+    > img{
+      object-fit: fill;
+    }
+  }
+}
+.parent-icon{
+  > img{
+    width: 9.6rem;
+  }
+}
+.parent-tab{
+  padding: 0 12.5%;
+  display: flex;
+  justify-content: space-around;
+  .nav-item{
+    > .nav-link{
+      font-size: 1.8rem;
+      font-weight: 300;
+      position: relative;
+      margin-bottom: 2rem;
+      span{
+        position: relative;
+        display: inline-block;
+        padding-bottom: 4rem;
+      }
+      .default{
+        display: block;
+      }
+      .hover{
+        display: none;
+      }
+      &.active{
+        .default{
+          display: none;
+        }
+        .hover{
+          display: block;
+        }
+        span:after{
+          content: '';
+          height: 2px;
+          position: absolute;
+          bottom: 1px;
+          width: 100%;
+          left: 0;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(md){
+    flex-wrap: nowrap;
+    padding: 0;
+    .nav-item > .nav-link span{
+      font-size: 1.4rem;
+    }
+  }
+}

@@ -1,0 +1,103 @@
+.block-3-cols {
+  .slick-list {
+    padding-bottom: 1.8rem;
+  }
+  .card {
+    height: 100%;
+    margin-bottom: 0;
+    &:hover {
+      &:after {
+        position: absolute;
+        width: 100%;
+        height:1px;
+        background: $green;
+        left:0;
+        bottom: -1.8rem;
+        content:"";
+      }
+    }
+  }
+
+
+  @include media-breakpoint-up(lg) {
+    .col-xl-3 {
+      //padding: 0 1rem;
+      //margin-bottom: 0;
+      width: 400px!important;
+      //height: auto;
+    }
+    padding-top: 16rem;
+    padding-bottom: 16rem;
+  }
+  &__heading {
+    .f-16 {
+      margin-bottom: 1.3rem;
+      line-height: 1.4;
+    }
+    margin-bottom: 8.5rem;
+    @include media-breakpoint-down(ld) {
+      //max-width: 50%;
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    &__heading {
+      margin-bottom: 6rem;
+    }
+    & + .text-media-block.image {
+      .order-2 {
+        & + .content-col {
+          .content-box {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+//.preShow {
+//  position: relative;
+//  opacity: 0;
+//  will-change: transform;
+//  transform: translateX(-30px);
+//  animation: preShow 1.8s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+//
+//  &::before {
+//    content: "";
+//    z-index: 999;
+//    position: absolute;
+//    left: 0;
+//    top: 0;
+//    display: block;
+//    width: 100%;
+//    height: 100%;
+//    background-color: #f1f5fb;
+//    transform-origin: right;
+//    will-change: transform;
+//    animation-delay: 1s;
+//    animation: preShowMove 1.8s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+//  }
+//}
+//
+//@keyframes preShowMove {
+//  to {
+//    transform: scaleX(0);
+//  }
+//}
+//
+//@keyframes preShow {
+//  0% {
+//    box-shadow: none;
+//
+//  }
+//  60% {
+//    box-shadow: none;
+//    opacity: 1;
+//    transform: translateX(0);
+//  }
+//  100% {
+//    opacity: 1;
+//    transform: translateX(0);
+//    box-shadow: 0 2px 4px 0 #ccd0d9;
+//  }
+//}

@@ -1,0 +1,107 @@
+.card {
+  cursor: pointer;
+  margin-bottom: 2rem;
+  will-change: transform;
+  transition: all 0.5s ease;
+  position: relative;
+  .bg-chalk & {
+    border:1px solid $green;
+  }
+  .bg-dush & {
+    color: $body-color
+  }
+  .pink-style & {
+    border:1px solid $pink;
+  }
+  &__top {
+    margin-bottom: 2.4rem;
+    //min-height: 7.8rem;
+    img {
+      height: 5rem;
+    }
+  }
+  &__bottom {
+    position: relative;
+  }
+  &__title-top {
+    transform: translatex(-8%);
+    transition: all 0.5s ease-out;
+    opacity: 0;
+    font-size: $font-size-base;
+    font-weight: 400;
+    margin-left: 1.3rem;
+  }
+  &__title {
+    transition: all 0.3s ease-out;
+    padding-bottom: 1rem;
+    border-bottom: .5px solid $green;
+    font-size: $font-size-base;
+    font-weight: 400;
+    margin-bottom: 1.3rem;
+  }
+  &__text {
+    transition: all 0.3s ease-out;
+    font-size: 1.6rem;
+  }
+  &__text-fade {
+    transition: all 0.8s ease-out;
+    opacity: 0;
+    font-size: 1.6rem;
+    position: absolute;
+    top: -10px;
+    transform: translateY(-10px);
+  }
+  &:hover,&.current {
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.2);
+    transform: scale3d(0.985, 0.985, 0.985) translateX(0);
+    background-color: $green;
+    .card__title-top {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    .card__title ,.card__text {
+      transform: translateY(16px);
+      opacity: 0;
+    }
+    .card__text-fade {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  &.card-no-effect {
+    .card__icon-hover {
+      display: none;
+    }
+    .card__top {
+      margin-bottom: 2.5rem;
+    }
+    .card__title {
+      border-bottom: .5px solid #08293B!important;
+    }
+    &:hover,&.current {
+      .card__icon {
+        display: none;
+      }
+      .card__icon-hover {
+        display: block;
+      }
+      .card__text-fade,.card__title-top {
+
+        opacity: 0;
+      }
+      .card__title ,.card__text {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    &__top {
+      margin-bottom: 5.4rem;
+    }
+    &__text-fade {
+      top: -30px;
+    }
+  }
+}
+

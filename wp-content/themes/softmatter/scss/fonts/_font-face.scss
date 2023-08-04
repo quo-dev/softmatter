@@ -1,0 +1,88 @@
+//@font-face {
+//  font-family: "gtwalsheim";
+//  font-weight: normal;
+//  font-style: normal;
+//  src: url("../fonts/gt-walsheim/gt-walsheim-medium-web.eot");
+//  src: url("../fonts/gt-walsheim/gt-walsheim-medium-web.eot?#iefix") format("embedded-opentype"), url("../fonts/gt-walsheim/gt-walsheim-medium-web.woff") format("woff"), url("../fonts/gt-walsheim/gt-walsheim-medium-web.ttf") format("truetype"), url("../fonts/gt-walsheim/gt-walsheim-medium-web.svg#gtwalsheim") format("svg")
+//}
+//@font-face {
+//  font-family: "gtwalsheim";
+//  font-weight: bold;
+//  font-style: normal;
+//  src: url("../fonts/gt-walsheim/gt-walsheim-bold-web.eot");
+//  src: url("../fonts/gt-walsheim/gt-walsheim-bold-web.eot?#iefix") format("embedded-opentype"), url("../fonts/gt-walsheim/gt-walsheim-bold-web.woff") format("woff"), url("../fonts/gt-walsheim/gt-walsheim-bold-web.ttf") format("truetype"), url("../fonts/gt-walsheim/gt-walsheim-bold-web.svg#gtwalsheim") format("svg")
+//}
+//@font-face {
+//  font-family: "gtwalsheim";
+//  font-weight: 300;
+//  font-style: normal;
+//  src: url("../fonts/gt-walsheim/gt-walsheim-light-web.eot");
+//  src: url("../fonts/gt-walsheim/gt-walsheim-light-web?#iefix") format("embedded-opentype"),
+//  url("../fonts/gt-walsheim/gt-walsheim-light-web.ttf") format("truetype"),
+//  url("../fonts/gt-walsheim/gt-walsheim-bold-web.svg#gtwalsheim") format("svg")
+//}
+
+// BODY FONT
+
+@font-face {
+  font-family: 'TT Firs Neue';
+  src: url('../fonts/heading/TTFirsNeue-Light.woff2') format('woff2'),
+  url('../fonts/heading/TTFirsNeue-Light.woff') format('woff'),
+  url('../fonts/heading/TTFirsNeue-Light.ttf') format('truetype'),
+  url('../fonts/heading/TTFirsNeue-Light.svg#TTFirsNeue-Light') format('svg');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Firs Neue';
+  src: url('../fonts/heading/TTFirsNeue-Regular.woff2') format('woff2'),
+  url('../fonts/heading/TTFirsNeue-Regular.woff') format('woff'),
+  url('../fonts/heading/TTFirsNeue-Regular.ttf') format('truetype'),
+  url('../fonts/heading/TTFirsNeue-Regular.svg#TTFirsNeue-Regular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Firs Neue';
+  src: url('../fonts/heading/TTFirsNeue-LightItalic.woff2') format('woff2'),
+  url('../fonts/heading/TTFirsNeue-LightItalic.woff') format('woff'),
+  url('../fonts/heading/TTFirsNeue-LightItalic.ttf') format('truetype'),
+  url('../fonts/heading/TTFirsNeue-LightItalic.svg#TTFirsNeue-LightItalic') format('svg');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Firs Neue';
+  src: url('../fonts/heading/TTFirsNeue-Italic.woff2') format('woff2'),
+  url('../fonts/heading/TTFirsNeue-Italic.woff') format('woff'),
+  url('../fonts/heading/TTFirsNeue-Italic.ttf') format('truetype'),
+  url('../fonts/heading/TTFirsNeue-Italic.svg#TTFirsNeue-Italic') format('svg');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+// HEADING FONT
+@font-face {
+  font-family: 'gtwalsheim';
+  src: url('../fonts/gt-walsheim/GT-Walsheim-Regular.eot');
+  src: local('☺'), url('../fonts/gt-walsheim/GT-Walsheim-Regular.woff') format('woff'), url('../fonts/gt-walsheim/GT-Walsheim-Regular.ttf') format('truetype'), url('../fonts/gt-walsheim/GT-Walsheim-Regular.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gtwalsheim';
+  src: url('../fonts/gt-walsheim/GT-Walsheim-Light.eot');
+  src: local('☺'), url('../fonts/gt-walsheim/GT-Walsheim-Light.woff') format('woff'), url('../fonts/gt-walsheim/GT-Walsheim-Light.ttf') format('truetype'), url('../fonts/gt-walsheim/GT-Walsheim-Light.svg') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+

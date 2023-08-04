@@ -1,0 +1,252 @@
+.accordion-item {
+  .collapsing {
+    transition: height 0.5s ease-out;
+  }
+  max-width: 567px;
+  h3,p {
+    margin-bottom: 2rem;
+  }
+  .more {
+    color: #FBF7EA;
+    .bg-chalk & {
+      color: $primary
+    }
+  }
+  & + .accordion-item {
+    padding-top: 5.5rem;
+  }
+  .btn-icon {
+    position: relative;
+    transition: all 0.3s linear;
+    opacity: 0.5;
+    &:hover {
+      padding-left: 5rem;
+      &:after {
+        opacity: 1;
+      }
+    }
+    &:after {
+      opacity: 0;
+      transition: all 0.3s linear;
+      content:$icon-arrow-right;
+      position: absolute;
+      left:0;
+      top: 10px;
+      font-size: 18px;
+      color: $green;
+      font-family: $icomoon-font-family;
+      .bg-mint & {
+        color: $body-color
+      }
+    }
+  }
+  .btn-icon[aria-expanded="true"]{
+    opacity: 1;
+    padding-left: 5rem;
+
+    &:after {
+      opacity: 1;
+    }
+  }
+}
+.accordion-slider-block {
+  //overflow: hidden;
+   min-height: 600px;
+  .container {
+    position: absolute;
+    left:50%;
+    top: 0;
+    transform: translateX(-50%);
+  }
+  .container-slider-right {
+    padding-left: 50%;
+  }
+  .slick-dots {
+    width: 200%;
+    left: -100%;
+  }
+  .slick-prev, .slick-next {
+    bottom: -16px;
+    z-index: 1;
+  }
+  .tab-slider__body ,.tab-slider__text{
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  .slick-current {
+    .tab-slider__body ,.tab-slider__text{
+      color: $green;
+    }
+  }
+  &.bg-mint  {
+    .slick-current {
+      .tab-slider__body ,.tab-slider__text{
+        color: $gray-900;
+      }
+    }
+  }
+  .icon-hovering-container {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  .slick-slide {
+    opacity: 0.5;
+    transition: opacity 200ms ease-out;
+    //pointer-events: none;
+  }
+  .slick-current.current {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  @include media-breakpoint-down(xl) {
+    h3 {
+      font-size: 3rem;
+    }
+    .accordion-item + .accordion-item {
+      padding-top: 3rem;
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    .slick-dots {
+      width: 100%;
+      left: 0;
+    }
+    .slick-prev, .slick-next {
+      display: none!important;
+    }
+    .container {
+      position: static;
+      transform: translateX(0%);
+    }
+    .accordion {
+      padding: 6rem 0 4rem;
+    }
+    .accordion-item {
+      max-width: none;
+    }
+    .container-slider-right {
+      padding-left: $grid-gutter-width/2;
+      padding-right: $grid-gutter-width/2;
+    }
+  }
+}
+.accordion {
+  padding-top: 17.2rem;
+  padding-bottom: 17.2rem;
+  .sub-title {
+    font-size: 1.4rem;
+    margin-bottom: 3.2rem
+  }
+}
+.accordion-slider-container {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease-in-out;
+  display: none;
+  opacity: 0;
+  &.active {
+    display: block!important;
+    visibility: visible;
+  }
+  &.is-open {
+    opacity: 1;
+  }
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.accordion-button[aria-expanded="true"] {
+  pointer-events: none;
+}
+
+.accordion-slider-block-secondary {
+
+
+  @include media-breakpoint-up(lg) {
+    .container-slider-right {
+      padding-left: 41.66667%;
+    }
+    .slick-dots {
+      width: calc(100% + 71%);
+      left: -71%;
+    }
+  }
+  &.bg-mint {
+    .btn-icon[aria-expanded="true"] {
+      color: $gray-900;
+    }
+    .btn-icon {
+      &:after {
+        background: $gray-900;
+      }
+    }
+  }
+  .accordion-header {
+    margin-bottom: 0;
+  }
+  .btn-icon {
+    opacity: 1;
+    text-align: left;
+    font-size: 3rem;
+    padding:0 0 1rem!important;
+    position: relative;
+    font-weight: 300;
+    &:after {
+     width: 100%;
+      height: 1px;
+      background: $green;
+      bottom:0;
+      content: "";
+      top: auto
+    }
+  }
+  .btn-icon {
+    &[aria-expanded="true"] {
+      color: $green;
+      .icon-img {
+        .tab-icon {
+          display: none;
+        }
+        .tab-icon-active {
+          display: block;
+        }
+      }
+    }
+  }
+  .icon-img {
+    pointer-events: none;
+    margin-bottom: 2rem;
+    width: 7rem;
+    height: 7rem;
+    display: flex;
+    .tab-icon-active {
+      display: none;
+    }
+
+    img {
+     object-fit: contain;
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    .btn-icon {
+      text-align: center;
+    }
+    .icon-img ,.btn-icon{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .container-slider-right {
+      margin-top: 5rem;
+    }
+  }
+}

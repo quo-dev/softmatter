@@ -1,0 +1,12 @@
+.cta-block {
+  h3 {
+    max-width: 360px;
+    margin-bottom: 2rem;
+  }
+  p {
+    max-width: 465px
+  }
+  @include media-breakpoint-up(lg) {
+    padding: 7rem 0;
+  }
+}

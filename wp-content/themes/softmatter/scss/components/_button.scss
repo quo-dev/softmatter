@@ -1,0 +1,26 @@
+.btn {
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    background: $primary;
+    box-shadow: $btn-active-box-shadow;
+    border-color: $primary;
+  }
+}
+
+.btn-primary {
+  &:hover {
+    background: $gray-900;
+    border-color: $gray-900;
+    color: white;
+  }
+}
+.btn-outline-secondary{
+  color: $primary;
+  border-color: $primary;
+  background-color: transparent;
+  &:hover {
+    color: $secondary;
+    background-color: transparent;
+    border-color: $secondary;
+  }
+}

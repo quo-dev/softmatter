@@ -1,0 +1,111 @@
+.app-footer {
+  background: #08293B;
+  color: $gray-100;
+  padding: 5.8rem 0;
+
+
+  a {
+    color: inherit;
+    &:hover {
+      color: $link-hover-color
+    }
+  }
+
+  .text-widget {
+    color: $green;
+    font-size: 2.6rem;
+    //max-width: 400px
+  }
+
+  .nav-link {
+    padding: 0;
+    line-height: 1.2;
+  }
+
+  &__top {
+    padding-bottom: 3rem;
+    margin-bottom: 5rem;
+    position: relative;
+
+    &:after {
+      bottom: 0;
+      content: '';
+      width: calc(100% - 2rem);
+      left: 50%;
+      position: absolute;
+      transform: translateX(-50%);
+      height: 1px;
+      display: block;
+      background: rgba(251, 247, 234, 0.2);
+    }
+  }
+  &__bottom {
+    margin-top: 3rem;
+  }
+
+  @include media-breakpoint-up(lg) {
+    &__bottom {
+      margin-top: 8.4rem;
+    }
+    &__right {
+      padding-left: 9.4rem;
+    }
+
+
+  }
+  @include media-breakpoint-down(sm) {
+    &__left.col {
+      max-width: 50px;
+    }
+
+  }
+  @include media-breakpoint-down(xl) {
+    .text-widget {
+      br {
+        display: none;
+      }
+    }
+  }
+}
+
+.subscribe {
+  @include media-breakpoint-up(lg) {
+    max-width: 315px;
+  }
+  label {
+    margin-bottom: 3rem;
+  }
+
+  &__input {
+    outline: none!important;
+    box-shadow: none!important;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(251, 247, 234, 0.2);
+    border-radius: 0;
+    padding: 1rem 4rem 1rem 0;
+    @include placeholder($gray-100, .5);
+    font-weight: 300;
+    color: $gray-100;
+    &:focus {
+      color: $gray-100;
+      background: transparent;
+      border-color: rgba(251, 247, 234, 0.5)!important;
+    }
+  }
+  &__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    font-size: 1.7rem;
+  }
+}
+.copy-right {
+  font-size: 1.4rem;
+}
+.nav.flex-column {
+  .nav-item {
+    margin-bottom: 1.6rem;
+  }
+}

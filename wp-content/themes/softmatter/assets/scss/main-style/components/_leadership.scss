@@ -1,0 +1,124 @@
+.leadership-section{
+  overflow: hidden;
+  &.bg-dush + .bg-dush{
+    padding-top: 0;
+  }
+  .slick-track{
+    float: left;
+  }
+}
+.team-name{
+  color: #41C59D;
+  font-size: 36px;
+}
+.team-lead{
+  margin-bottom: 9rem;
+  &__image{
+    &--content{}
+  }
+  &__info{
+    display: flex;
+    align-items: center;
+    &--content{}
+  }
+  .bio{
+    font-size: 2rem;
+    line-height: 1.45;
+  }
+}
+.leader-name, .leader-title{
+  font-size: 2.4rem;
+  color: #41C59D;
+  margin-bottom: 10px;
+}
+.leader-title{
+  font-size: 2rem;
+  color: #41C59D;
+  margin-bottom: 1.6rem;
+}
+.white-style .leader-title{
+  font-size: 2.4rem;
+  color: #fff;
+}
+.share-social{
+  display: flex;
+  align-items: center;
+}
+.link-social{
+  margin-right: 1rem;
+  display: inline-block;
+  > img{
+    width: 3.2rem;
+  }
+}
+
+.team-member{
+  &__image{
+    width: 100%;
+  }
+}
+.team-member-cta{}
+.team-members-slider{
+  .team-member{
+    width: 100%;
+  }
+}
+
+@include media-breakpoint-up(md){
+  .leadership-section{
+    .row{
+      margin-left: -10px;
+      margin-right: -10px;
+      > div{
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+  }
+  .team-members-slider{
+    margin-left: -10px;
+    margin-right: -10px;
+    width: auto;
+    > .col-lg-4, .item-member{
+      padding: 0 10px;
+      //max-width: 33.33%;
+    }
+  }
+}
+@include media-breakpoint-up(lg){
+  .leadership-section .row {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  .leadership-section .row > div {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .team-members-slider{
+    margin-left: -20px;
+    margin-right: -20px;
+    width: auto;
+    > .col-lg-4, .item-member{
+      padding: 0 20px;
+      //max-width: 33.33%;
+    }
+  }
+}
+@include media-breakpoint-down(lg){
+  .team-lead__image--content{
+    margin-bottom: 5rem;
+  }
+}
+@include media-breakpoint-down(md){
+  .team-lead{
+    text-align: center;
+    &__image{
+      &--content{
+        margin-bottom: 3rem;
+      }
+    }
+  }
+  .team-lead__image--content{
+    margin-bottom: 3rem;
+  }
+}

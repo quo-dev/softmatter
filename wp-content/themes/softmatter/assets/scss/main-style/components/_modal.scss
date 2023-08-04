@@ -1,0 +1,66 @@
+.modal-dialog {
+  max-width: 1003px;
+  overflow: hidden;
+  .bg-gadient {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom:0;
+    z-index: 1;
+    background: linear-gradient(5.29deg, #FBF7EA -1.58%, rgba(251, 247, 234, 0) 95.5%);
+    height: 140px;border-radius: 0 0 2rem 2rem;
+  }
+  .icon-clear {
+    font-size: 5rem;
+  }
+  .btn-icon {
+    z-index: 2;
+    position: absolute;
+    right: 3.5rem;
+    top: 3.5rem;
+  }
+}
+.scroll-content {
+  overflow: auto;
+  max-height: calc(100vh - 3.5rem);
+  padding: 0 5rem;
+
+}
+
+.modal-backdrop.show {
+  opacity: 1;
+  background-color: rgba(8, 41, 59, 0.9);
+}
+.modal-content {
+  line-height: 26px;
+  border-radius: 2rem;
+  background: $gray-100;
+  border:none;
+
+  font-size: 1.6rem;
+  h5 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-top: 3rem;
+  }
+  p ,ul,ol{
+    margin-bottom: 3rem;
+  }
+}
+.modal-body {
+  padding: 6rem 1rem 6rem 1rem;
+}
+@include media-breakpoint-down(lg) {
+  .modal-body {
+    padding: 6rem 4rem 4rem 4rem;
+  }
+  .scroll-content {
+    padding: 0 ;
+
+  }
+  .modal-dialog .btn-icon {
+    right: 1rem;
+    top: 1rem;
+  }
+}

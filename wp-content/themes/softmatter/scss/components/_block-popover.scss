@@ -1,0 +1,116 @@
+.popover-block {
+  position: relative;
+  .container {
+    position: absolute;
+    left: 50%;
+    top:0;
+    transform: translateX(-50%);
+    height: 100%;
+    z-index: 2;
+  }
+  .media {
+    height: 100%;
+  }
+  .media-object {
+    object-fit: cover;
+    width: 100%;
+    display: block;
+    flex-grow: 1;
+  }
+  @include media-breakpoint-down(lg) {
+    padding: $spacing-mobile 0;
+   .container {
+     position: relative !important;
+     -ms-transform: none;
+     transform: none;
+     left: auto;
+   }
+    .app-popover + .app-popover{
+      margin-top: 3rem;
+    }
+  .media {
+      position: absolute;
+      height: 100%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+    }
+  }
+}
+
+.app-popover {
+  pointer-events: initial!important;
+  color: white;
+  position: absolute;
+  z-index: 1;
+  padding-left: 2.2rem;
+  .light & {
+    color: $gray-900;
+  }
+
+  &:hover {
+    .app-popover__text {
+      opacity: 1;
+    }
+  }
+  &__title {
+    font-weight: 300;
+    cursor: pointer;
+    margin-bottom: 1.7rem;
+    position: relative;
+    &:before {
+      margin-left: -2.2rem;
+      display: block;
+      content: "";
+      height: 1rem;
+      width: 1rem;
+      background: $green;
+      margin-bottom: .5rem;
+      .light  &{
+        background: $pink;
+      }
+    }
+  }
+
+  &.md {
+    .app-popover__title:before {
+      height: 1.5rem;
+      width: 1.5rem;
+    }
+  }
+  &.lg {
+    .app-popover__title:before {
+      height: 2rem;
+      width: 2rem;
+    }
+  }
+  &.xl {
+    .app-popover__title:before {
+      height: 2.5rem;
+      width: 2.5rem;
+    }
+  }
+  &__text {
+    max-width: 410px;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+  }
+  @include media-breakpoint-down(xl) {
+    &__title {
+      font-size: 3rem;
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    position: static!important;
+    &__title {
+      //br {
+      //  display: none;
+      //}
+    }
+    &__text {
+      opacity: 1;
+      max-width: none;
+    }
+  }
+}

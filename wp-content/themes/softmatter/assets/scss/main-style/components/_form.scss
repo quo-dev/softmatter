@@ -1,0 +1,110 @@
+.form-group{
+  label.error{
+    padding-top: 8px;
+    font-size: 17px;
+  }
+}
+.form-control {
+  &.error {
+    border-color: $red!important;
+  }
+  @include media-breakpoint-down(lg) {
+    font-size: initial!important;
+  }
+  .bg-dush &,.bg-dark & {
+    background: none;
+    border-color: rgba(251, 247, 234, 0.3);
+    font-size: 1.8rem;
+    border-radius: 1.2rem;
+    @include placeholder(rgba(251,247 ,234,0.3));
+    color: white;
+    &:-webkit-autofill {
+      border-bottom: 1px solid rgba(251, 247, 234, 0.3);
+      -webkit-text-fill-color: white;
+      -webkit-box-shadow: 0 0 0px 1000px $gray-900 inset;
+      transition: background-color 5000s ease-in-out 0s;
+      &:hover,&:focus {
+        -webkit-text-fill-color: white;
+        -webkit-box-shadow: 0 0 0px 1000px  $gray-900 inset;
+        transition: background-color 5000s ease-in-out 0s;
+      }
+    }
+  }
+
+  .form-control-green {
+    background: none;
+    border-color: $green;
+    font-size: 1.8rem;
+    border-radius: 1.2rem;
+    @include placeholder(rgba(251,247 ,234,0.3));
+    //@include placeholder(rgba(225,225 ,225,0.3));
+    color: white;
+    &:-webkit-autofill {
+      border-bottom: 1px solid $green;
+      -webkit-text-fill-color: white;
+      -webkit-box-shadow: 0 0 0px 1000px $gray-900 inset;
+      transition: background-color 5000s ease-in-out 0s;
+      &:hover,&:focus {
+        -webkit-text-fill-color: white;
+        -webkit-box-shadow: 0 0 0px 1000px  $gray-900 inset;
+        transition: background-color 5000s ease-in-out 0s;
+      }
+    }
+  }
+}
+.group-fields {
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(251, 247, 234, 0.3);
+}
+.error {
+  color: $red;
+}
+.checkbox {
+  @include checkbox()
+}
+.radio {
+  @include checkbox();
+  @include radio();
+  padding-left: 24px;
+}
+
+select.form-control {
+  appearance: none;
+  -moz-appearance: none;
+  padding-right: 3.5rem;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path fill="%23888888" d="M119.5 326.9L3.5 209.1c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.7-4.7 12.3-4.7 17 0L128 287.3l100.4-102.2c4.7-4.7 12.3-4.7 17 0l7.1 7.1c4.7 4.7 4.7 12.3 0 17L136.5 327c-4.7 4.6-12.3 4.6-17-.1z"/></svg>') !important;
+  background-size: 12px!important;
+  background-position: calc(100% - 15px) center!important;;
+  background-repeat: no-repeat!important;;
+}
+#billing-form.hide-error{
+  .form-group{
+    label.error{
+      display: none !important;
+    }
+  }
+}
+#go_to_payment{
+  .loading{
+    position: relative;
+    width: auto;
+    height: auto;
+    &:after{
+      position: absolute;
+      right: 31%;
+      top: 7px;
+    }
+  }
+}
+#modalConfirm{
+  .modal-dialog .btn-icon{
+    right: 1.5rem;
+    top: 1.5rem;
+  }
+  .modal-body {
+    text-align: center;
+  }
+  .modal-cta{
+    display: inline;
+  }
+}

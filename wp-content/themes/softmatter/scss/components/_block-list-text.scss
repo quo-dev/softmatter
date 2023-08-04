@@ -1,0 +1,78 @@
+.list-text-block  {
+  background-size: cover;
+  background-repeat: no-repeat;
+  .list {
+    margin-bottom: 8.7rem;
+    text-align: center;
+  }
+  .square {
+    width: 12px;
+    height: 12px;
+    margin-bottom: 1rem;
+    background: white;
+    display: block;
+  }
+  @include media-breakpoint-up(lg) {
+    padding-top: 14rem;
+    padding-bottom: 8.3rem;
+  }
+  .sub-title {
+    font-size: 1.6rem;
+    margin-bottom: 3.7rem;
+    text-transform: uppercase;
+    text-align: left;
+
+  }
+  .title {
+    margin-bottom: 2.2rem;
+    max-width: 470px;
+    padding-left: 2.5rem;
+    font-size: 4rem;
+    font-family: $headings-font-family;
+  }
+  .text,.sub-text {
+    padding-left: 2.5rem;
+  }
+  .title-lg {
+    margin-bottom: 1.2rem;
+    font-size: 8rem;
+    line-height: 1;
+    max-width: none;
+    padding-left: 2.5rem;
+    sup {
+      font-size: 2.6rem;
+      line-height: 1;
+      top: -37px;
+      margin-left: 5px;
+      font-family: $font-family-base;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    .title {
+      font-size: 3rem;
+    }
+    .title-lg {
+      font-size: 4rem;
+      sup {
+        font-size: 2rem;
+        top: -16px;
+      }
+    }
+    .sub-title ,.title{
+      margin-bottom: 2rem;
+    }
+    .list {
+      margin-bottom: 5rem;
+    }
+    .col-md-6:last-child {
+      .list {
+        margin-bottom: 0;
+      }
+    }
+  }
+  @include media-breakpoint-down(md) {
+
+  }
+
+}
